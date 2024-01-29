@@ -1,0 +1,20 @@
+﻿
+@{
+    var cookie = Request.Cookies["Preferences"];
+    ViewBag.Title = "CookieResult";
+}
+
+<table class="table table-primary">
+    <tr>
+        <th>Theme</th>
+        <th>Language</th>
+    </tr>
+    @if (cookie != null) {
+        <tr>
+            <td>@cookie["Theme"]</td>
+            <td>@cookie["Language"]</td>
+        </tr>
+    }
+    
+</table>
+
